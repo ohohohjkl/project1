@@ -1,0 +1,34 @@
+
+Class KNX
+
+Class ManufactureData
+
+Class Manufacturer
+
+1 class co bn class con, tag cua tung class
+
+
+KNX
+	ManufacturerData - 1
+		Manufacture - 1
+			ApplicationPrograms - 1
+				ApplicationProgram - 1
+					Static - 1
+						Code - 1
+							AbsoluteSegment - 6
+								Data - 1
+								Mask 
+						ParameterTypes - 1
+						Parameters - 1
+						ParameterRefs - 1
+						ComObjectTable - 1
+						ComObjectRefs - 1
+						AddressTable - 1
+						AssociationTable - 1
+						LoadProcedures - 1
+						Extension - 1
+						Options - 1
+					Dynamic -1
+			Languages - 2
+
+				

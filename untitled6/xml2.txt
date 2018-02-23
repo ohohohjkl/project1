@@ -1,0 +1,103 @@
+KNX {'CreatedBy': 'MT', 'ToolVersion': '5.1.255.16695'}
+	
+ManufacturerData 
+
+Manufacturer {'RefId': 'M-0083'}
+
+ApplicationPrograms 
+
+ApplicationProgram {'Id': 'M-0083_A-008A-13-D647', 'ApplicationNumber': '138', 'ApplicationVersion': '19', 'ProgramType': 'ApplicationProgram', 'MaskVersion': 'MV-0705', 'Name': 'Push Button II Smart, Temperature', 'LoadProcedureStyle': 'ProductProcedure', 'PeiType': '1', 'HelpFile': '', 'DefaultLanguage': 'en-US', 'DynamicTableManagement': 'false', 'Linkable': 'false', 'MinEtsVersion': '4.0', 'CreatedFromLegacySchemaVersion': 'true', 'ReplacesVersions': '16 17 18', 'Hash': '1qwqREZD8Axy1D+GEbFURw=='}
+
+Static
+
+Code	 
+
+AbsoluteSegment {'Id': 'M-0083_A-008A-13-D647_AS-4000', 'Address': '16384', 'Size': '513'}
+AbsoluteSegment {'Id': 'M-0083_A-008A-13-D647_AS-08E8', 'MemoryType': 'RAM', 'Address': '2280', 'Size': '1'}
+AbsoluteSegment {'Id': 'M-0083_A-008A-13-D647_AS-4620', 'MemoryType': 'EEPROM', 'Address': '17952', 'Size': '1770'}
+
+ParameterTypes {}
+ParameterType {'Id': 'M-0083_A-008A-13-D647_PT-Time1.2D60s', 'Name': 'Time1-60s'}
+	TypeNumber {'SizeInBit': '8', 'Type': 'unsignedInt', 'minInclusive': '0', 'maxInclusive': '255'}
+
+	TypeRestriction {'Base': 'Value', 'SizeInBit': '8'}
+		Enumeration {'Text': '30,0 s', 'Value': '30000', 'Id': 'M-0083_A-008A-13-D647_PT-en.5FtimeforLongSwitch_EN-30000'}
+
+	TypeText {'SizeInBit': '120'}
+	TypeText {'SizeInBit': '56', 'Pattern': '^#[0-9a-fA-F]{6}$(?# TypeColor:RGB)'}
+	
+	TypeFloat {'Encoding': 'DPT 9', 'minInclusive': '0', 'maxInclusive': '45'}
+
+	TypePicture {'RefId': 'M-0083_BG--Farbsat.5Fklein.5Fschwarz.5Fschmal.2Epng'}
+
+Parameters {}
+	Parameter {'Id': 'M-0083_A-008A-13-D647_P-2190', 'Name': 'DisplayTimeSwitchRow', 'ParameterType': 'M-0083_A-008A-13-D647_PT-DisplayTimeSwitch', 'Text': 'Timeout for standby', 'Value': '0'}
+	Union {'SizeInBit': '136'}
+		Memory {'CodeSegment': 'M-0083_A-008A-13-D647_AS-4620', 'Offset': '1764', 'BitOffset': '5'}
+
+ParameterRefs {}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_UP-1960_R-414', 'RefId': 'M-0083_A-008A-13-D647_UP-1960', 'Text': '', 'Tag': '5615', 'Value': '1'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_P-1796_R-12616', 'RefId': 'M-0083_A-008A-13-D647_P-1796', 'Tag': '5589', 'Value': '2'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_UP-1324_R-7376', 'RefId': 'M-0083_A-008A-13-D647_UP-1324', 'Tag': '5524', 'Access': 'None', 'Value': '4'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_P-1500_R-10397', 'RefId': 'M-0083_A-008A-13-D647_P-1500', 'Access': 'None', 'Value': '^'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_P-2190_R-416', 'RefId': 'M-0083_A-008A-13-D647_P-2190'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_P-314_R-100', 'RefId': 'M-0083_A-008A-13-D647_P-314', 'Value': '9'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_P-1806_R-12618', 'RefId': 'M-0083_A-008A-13-D647_P-1806', 'Access': 'None'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_UP-1436_R-8679', 'RefId': 'M-0083_A-008A-13-D647_UP-1436', 'Tag': '5514'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_P-1804_R-12729', 'RefId': 'M-0083_A-008A-13-D647_P-1804', 'Text': 'Color of symbol for frost protection mode', 'Value': '2'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_UP-1212_R-6805', 'RefId': 'M-0083_A-008A-13-D647_UP-1212', 'Text': 'Time delay between the switching of RGB-values', 'Tag': '5514'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_UP-1103_R-6767', 'RefId': 'M-0083_A-008A-13-D647_UP-1103', 'Text': '    1. Switching value', 'Tag': '5522', 'Value': '0'}
+ParameterRef {'Id': 'M-0083_A-008A-13-D647_UP-2062_R-10269', 'RefId': 'M-0083_A-008A-13-D647_UP-2062', 'Text': 'Stepwith of controller', 'Tag': '5009'}		
+
+
+ComObjectTable {'CodeSegment': 'M-0083_A-008A-13-D647_AS-4400', 'Offset': '0'}
+ComObject {'Id': 'M-0083_A-008A-13-D647_O-119', 'Name': 'AlarmMessage', 'Text': 'Message text (lowest priority)', 'Number': '119', 'FunctionText': 'Input', 'ObjectSize': '14 Bytes', 'ReadFlag': 'Disabled', 'WriteFlag': 'Enabled', 'CommunicationFlag': 'Enabled', 'TransmitFlag': 'Disabled', 'UpdateFlag': 'Disabled', 'ReadOnInitFlag': 'Disabled', 'DatapointType': 'DPST-16-0'}
+
+ComObjectRefs {}	
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-62_R-388', 'RefId': 'M-0083_A-008A-13-D647_O-62', 'Text': 'Slap-button long', 'FunctionText': 'Forcible control', 'ObjectSize': '2 Bit', 'WriteFlag': 'Enabled', 'DatapointType': 'DPST-2-1'}
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-56_R-946', 'RefId': 'M-0083_A-008A-13-D647_O-56', 'Tag': '11039', 'FunctionText': 'State HVAC-Mode', 'ObjectSize': '1 Byte', 'ReadFlag': 'Disabled', 'WriteFlag': 'Enabled', 'TransmitFlag': 'Enabled', 'UpdateFlag': 'Enabled', 'DatapointType': 'DPST-20-102'}
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-51_R-834', 'RefId': 'M-0083_A-008A-13-D647_O-51', 'Text': 'Push buttons 11 / 12', 'Tag': '10001', 'FunctionText': 'State HVAC-Mode', 'ObjectSize': '1 Byte', 'ReadFlag': 'Disabled', 'WriteFlag': 'Enabled', 'UpdateFlag': 'Enabled', 'DatapointType': 'DPST-20-102'}
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-41_R-1593', 'RefId': 'M-0083_A-008A-13-D647_O-41', 'Text': 'Push button 9 / 10 short', 'Tag': '10001', 'FunctionText': 'State of temperatue value', 'ObjectSize': '2 Bytes', 'ReadFlag': 'Disabled', 'WriteFlag': 'Enabled', 'TransmitFlag': 'Enabled', 'UpdateFlag': 'Enabled', 'DatapointType': 'DPST-9-1'}
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-124_R-699', 'RefId': 'M-0083_A-008A-13-D647_O-124', 'FunctionText': 'Value in %', 'TransmitFlag': 'Enabled', 'UpdateFlag': 'Enabled', 'DatapointType': 'DPST-9-7'}
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-62_R-235', 'RefId': 'M-0083_A-008A-13-D647_O-62', 'Text': 'Slap-button long', 'FunctionText': 'RGB-value', 'ObjectSize': '3 Bytes', 'DatapointType': 'DPST-232-600'}
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-104_R-344', 'RefId': 'M-0083_A-008A-13-D647_O-104'}
+ComObjectRef {'Id': 'M-0083_A-008A-13-D647_O-93_R-97', 'RefId': 'M-0083_A-008A-13-D647_O-93', 'ObjectSize': '1 Bit'}
+
+AddressTable {'CodeSegment': 'M-0083_A-008A-13-D647_AS-4000', 'Offset': '0', 'MaxEntries': '255'}
+
+AssociationTable {'CodeSegment': 'M-0083_A-008A-13-D647_AS-4201', 'Offset': '0', 'MaxEntries': '255'}
+
+LoadProcedures {}
+	LoadProcedure {}
+		LdCtrlConnect {}
+		LdCtrlCompareProp {'ObjIdx': '0', 'PropId': '78', 'InlineData': '00000000022700000000'}
+		LdCtrlUnload {'LsmIdx': '3'}
+		LdCtrlLoad {'LsmIdx': '1'}
+		LdCtrlAbsSegment {'LsmIdx': '3', 'SegType': '0', 'Address': '17952', 'Size': '1770', 'Access': '255', 'MemType': '3', 'SegFlags': '128'}
+		LdCtrlTaskSegment {'LsmIdx': '1', 'Address': '16384'}	
+		LdCtrlLoadCompleted {'LsmIdx': '1'}
+		LdCtrlRestart {}
+		LdCtrlDisconnect {}
+	Extension {}
+		Baggage {'RefId': 'M-0083_BG--Farbsat.5Fklein.5Fschwarz.5Fschmal.2Epng'}
+	Options {}
+
+Dynamic {}
+	Channel {'Name': 'Temperature', 'Text': 'Temperature measurement', 'Number': '4', 'Id': 'M-0083_A-008A-13-D647_CH-4'}
+		ParameterBlock {'Id': 'M-0083_A-008A-13-D647_PB-10', 'Name': 'pGeneral', 'Text': 'Basic setting'}
+			ComObjectRefRef {'RefId': 'M-0083_A-008A-13-D647_O-112_R-62'}
+			ParameterRefRef {'RefId': 'M-0083_A-008A-13-D647_P-574_R-583'}	
+			choose {'ParamRefId': 'M-0083_A-008A-13-D647_P-596_R-609'}
+				when {'test': '1'}
+				when {'default': 'true'}
+			ParameterSeparator {'Id': 'M-0083_A-008A-13-D647_PS-11', 'Text': 'Push buttons 1/2 top, push buttons 3/4 central, push buttons 5/6 bottom '}
+
+Languages {}
+	Language {'Identifier': 'en-US'}
+	Language {'Identifier': 'de-DE'}
+		TranslationUnit {'RefId': 'M-0083_A-008A-13-D647'}
+			TranslationElement {'RefId': 'M-0083_A-008A-13-D647_O-51_R-1868'}
+				Translation {'AttributeName': 'Text', 'Text': 'Umschaltung berücksichtigt Statusobjekt'}
+
+				
+		
